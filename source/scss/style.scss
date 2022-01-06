@@ -1,0 +1,196 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page__body {
+  font-family: $font_family;
+  @include font();
+  background-color: #ffffff;
+}
+
+.page-header {
+  @include font(500, 20px, 20px, #000000)
+}
+
+.page-header__logo {}
+
+.page-header__logo-text {}
+
+.page-header__main-nav {}
+
+.page-header__button {}
+
+.visually-hidden {}
+
+.main-nav__wrapper {}
+
+.main-nav__list {}
+
+.site-list {}
+
+.site-list__item {}
+
+.site-list__pages {}
+
+.page-main {}
+
+.promo {}
+
+.promo__main-text {}
+
+.promo__text {}
+
+.promo__button {}
+
+.nutrition-programs {}
+
+.nutrition-programs-list {}
+
+.programs-list {}
+
+.programs-list__weight-loss {}
+
+.programs-list__article-weight-loss {}
+
+.weight-loss {}
+
+.weight-loss__heading {}
+
+.weight-loss__img {}
+
+.weight-lose__slogan {}
+
+.weight-lose__more {}
+
+.programs-list__weight-gain {}
+
+.programs-list__article-weight-gain {}
+
+.weight-gain {}
+
+.weight-gain__heading {}
+
+.weight-gain__img {}
+
+.weight-gain__slogan {}
+
+.weight-gain__more {}
+
+.about-nutrition-programs {}
+
+.about-nutrition-programs__heading {}
+
+.about-list {}
+
+.about-list__useful {}
+
+.about-list__item-img {}
+
+.about-list__text {}
+
+.about-list__convenience {}
+
+.about-list__usage {}
+
+.about-list__result {}
+
+.example {}
+
+.example__title {}
+
+.example__history {}
+
+.example__list {}
+
+.list-result {}
+
+.list-result__weight {}
+
+.list-result__time {}
+
+.list-result__price {}
+
+.example__img-result {}
+
+.example__slider {}
+
+.slider {}
+
+.slider__before {}
+
+.slider__range {}
+
+.slider__size-range {}
+
+.slider__after {}
+
+.about-us {}
+
+.about-us__invitation {}
+
+.about-us__address {}
+
+.about-us__map {}
+
+.page-footer {}
+
+.page-footer__logo {}
+
+.page-footer__social-icons-list {}
+
+.social-icons-list {}
+
+.social-icons-list__vk {}
+
+.social-icons-list__link {}
+
+.social-icons-list__inst {}
+
+.social-icons-list__fb {}
+
+.page-footer__author {}
+
+.author {}
+
+.author__text {}
+
+.author__link {}
+
+.author__logo {}
