@@ -1,5 +1,6 @@
 @import "mixins.scss";
 @import "variables.scss";
+@import "fonts.scss";
 
 * {
   margin: 0;
@@ -41,23 +42,27 @@ a {
 
 .page__body {
   font-family: $font_family;
-  @include font();
+  @include font_base();
   background-color: #ffffff;
 }
 
 .page-header {
-  @include font(500, 20px, 20px, #000000)
+  @include font_base(500, 20px, 20px, #000000);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-areas:
+    "logo btn";
 }
 
-.page-header__logo {}
-
-.page-header__logo-text {}
+.page-header__logo {
+  grid-area: logo;
+}
 
 .page-header__main-nav {}
 
-.page-header__button {}
-
-.visually-hidden {}
+.page-header__button {
+  grid-area: btn;
+}
 
 .main-nav__wrapper {}
 

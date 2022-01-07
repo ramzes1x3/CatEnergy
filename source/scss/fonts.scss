@@ -1,0 +1,5 @@
+//сюда происходит автоматическое подключение шрифтов функцией в gulpfile.js fontsStyle()
+//можно изменять первый аргумент функции font (3 аргумент менять под
+//жирность начертания шрифта(regular - 400, medium - 500, bold - 700)
+@include font("Oswald_medium", "oswaldmedium", "500", "normal");
+@include font("Oswald", "oswaldregular", "400", "normal");
