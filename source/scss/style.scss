@@ -1,6 +1,9 @@
 @import "mixins.scss";
 @import "variables.scss";
 @import "fonts.scss";
+@import "header.scss";
+@import "main.scss";
+@import "footer.scss";
 
 * {
   margin: 0;
@@ -11,6 +14,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
 }
 
 img {
@@ -40,162 +49,37 @@ a {
   overflow: hidden;
 }
 
+[class*="__container"] {
+  //применяется ко всем селекторам, которые содержат __container
+  width: 1220px;
+  margin: 0px auto;
+  padding: 0px 10px;
+}
+
 .page__body {
-  font-family: $font_family;
+  font-family: $font_oswald_regular;
   @include font_base();
-  background-color: #ffffff;
 }
 
-.page-header {
-  @include font_base(500, 20px, 20px, #000000);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 100px);
-  grid-template-areas:
-    "logo btn";
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
 }
 
-.page-header__logo {
-  grid-area: logo;
+// tablet
+@media (max-width: 1220px) {
+  [class*="__container"] {
+    max-width: 710px;
+    margin: 0px auto;
+  }
 }
 
-.page-header__main-nav {}
-
-.page-header__button {
-  grid-area: btn;
+// mobile
+@media (max-width: 767.98px) {
+  [class*="__container"] {
+    max-width: 282px;
+    margin: 0px auto;
+  }
 }
-
-.main-nav__wrapper {}
-
-.main-nav__list {}
-
-.site-list {}
-
-.site-list__item {}
-
-.site-list__pages {}
-
-.page-main {}
-
-.promo {}
-
-.promo__main-text {}
-
-.promo__text {}
-
-.promo__button {}
-
-.nutrition-programs {}
-
-.nutrition-programs-list {}
-
-.programs-list {}
-
-.programs-list__weight-loss {}
-
-.programs-list__article-weight-loss {}
-
-.weight-loss {}
-
-.weight-loss__heading {}
-
-.weight-loss__img {}
-
-.weight-lose__slogan {}
-
-.weight-lose__more {}
-
-.programs-list__weight-gain {}
-
-.programs-list__article-weight-gain {}
-
-.weight-gain {}
-
-.weight-gain__heading {}
-
-.weight-gain__img {}
-
-.weight-gain__slogan {}
-
-.weight-gain__more {}
-
-.about-nutrition-programs {}
-
-.about-nutrition-programs__heading {}
-
-.about-list {}
-
-.about-list__useful {}
-
-.about-list__item-img {}
-
-.about-list__text {}
-
-.about-list__convenience {}
-
-.about-list__usage {}
-
-.about-list__result {}
-
-.example {}
-
-.example__title {}
-
-.example__history {}
-
-.example__list {}
-
-.list-result {}
-
-.list-result__weight {}
-
-.list-result__time {}
-
-.list-result__price {}
-
-.example__img-result {}
-
-.example__slider {}
-
-.slider {}
-
-.slider__before {}
-
-.slider__range {}
-
-.slider__size-range {}
-
-.slider__after {}
-
-.about-us {}
-
-.about-us__invitation {}
-
-.about-us__address {}
-
-.about-us__map {}
-
-.page-footer {}
-
-.page-footer__logo {}
-
-.page-footer__social-icons-list {}
-
-.social-icons-list {}
-
-.social-icons-list__vk {}
-
-.social-icons-list__link {}
-
-.social-icons-list__inst {}
-
-.social-icons-list__fb {}
-
-.page-footer__author {}
-
-.author {}
-
-.author__text {}
-
-.author__link {}
-
-.author__logo {}
