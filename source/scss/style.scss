@@ -1,7 +1,6 @@
 @import "mixins.scss";
 @import "variables.scss";
 @import "fonts.scss";
-@import "header.scss";
 @import "main.scss";
 @import "footer.scss";
 
@@ -68,6 +67,7 @@ a {
 
 .page-wrapper {
   display: grid;
+  position: relative;
   grid-template-rows: auto 1fr auto;
   overflow: hidden;
   min-height: 100%;
@@ -94,4 +94,6 @@ a {
   }
 }
 
-@import "mobile.scss";
+@import "desktop_header.scss";
+@import "tablet_header.scss";
+@import "mobile_header.scss";
