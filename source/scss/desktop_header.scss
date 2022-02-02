@@ -2,8 +2,17 @@
 @import "variables.scss";
 
 .page-header {
-  background: url(../img/index-background-desktop.png) 49.5vw 0 no-repeat;
-  position: relative;
+  background-image: url("../img/index-background-desktop.jpg");
+  background-image: -webkit-image-set(url("../img/index-background-desktop@2x.webp") 2x,
+      url("../img/index-background-desktop.webp") 1x,
+      url("../img/index-background-desktop@2x.jpg") 2x,
+      url("../img/index-background-desktop.jpg") 1x);
+  background-image: image-set(url("../img/index-background-desktop@2x.webp") 2x,
+      url("../img/index-background-desktop.webp") 1x,
+      url("../img/index-background-desktop@2x.jpg") 2x,
+      url("../img/index-background-desktop.jpg") 1x);
+  background-position: 49.5vw 0;
+  background-repeat: no-repeat;
   width: 100%;
 
   &__container {
@@ -11,6 +20,17 @@
     height: 695px;
     grid-template-rows: 150px 410px;
     position: relative;
+  }
+
+  &__logo-desktop:hover {
+    fill-opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &__logo-desktop:active,
+  &__logo-tablet:active,
+  &__logo-mobile:active {
+    fill-opacity: 0.6;
   }
 
   &__can-index {
@@ -46,7 +66,20 @@
     grid-gap: 30px;
   }
 
-  &__item {}
+  &__item {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__item-index._active {
+    border-bottom: 2px solid #FFFFFF;
+  }
 
   &__link {}
 }
@@ -81,5 +114,13 @@
     text-transform: uppercase;
     background: #68B738;
     padding: 14px 26px 14px 26px;
+
+    &:hover {
+      background: #4a8f1f;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }

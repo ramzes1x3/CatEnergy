@@ -38,6 +38,10 @@ img {
   height: auto;
 }
 
+button {
+  font-family: inherit;
+}
+
 ul {
   list-style-type: none;
   margin-left: 0;
@@ -101,8 +105,11 @@ a {
   }
 }
 .page-header {
-  background: url(../img/index-background-desktop.png) 49.5vw 0 no-repeat;
-  position: relative;
+  background-image: url("../img/index-background-desktop.jpg");
+  background-image: -webkit-image-set(url("../img/index-background-desktop@2x.webp") 2x, url("../img/index-background-desktop.webp") 1x, url("../img/index-background-desktop@2x.jpg") 2x, url("../img/index-background-desktop.jpg") 1x);
+  background-image: image-set(url("../img/index-background-desktop@2x.webp") 2x, url("../img/index-background-desktop.webp") 1x, url("../img/index-background-desktop@2x.jpg") 2x, url("../img/index-background-desktop.jpg") 1x);
+  background-position: 49.5vw 0;
+  background-repeat: no-repeat;
   width: 100%;
 }
 .page-header__container {
@@ -110,6 +117,13 @@ a {
   height: 695px;
   grid-template-rows: 150px 410px;
   position: relative;
+}
+.page-header__logo-desktop:hover {
+  fill-opacity: 0.8;
+  cursor: pointer;
+}
+.page-header__logo-desktop:active, .page-header__logo-tablet:active, .page-header__logo-mobile:active {
+  fill-opacity: 0.6;
 }
 .page-header__can-index {
   position: absolute;
@@ -140,6 +154,16 @@ a {
   padding: 15px 0 0 0;
   grid-gap: 30px;
 }
+.main-nav__item:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.main-nav__item:active {
+  opacity: 0.3;
+}
+.main-nav__item-index._active {
+  border-bottom: 2px solid #FFFFFF;
+}
 .promo {
   z-index: 1;
   padding: 65px 0 0 80px;
@@ -169,10 +193,16 @@ a {
   background: #68B738;
   padding: 14px 26px 14px 26px;
 }
+.promo__button:hover {
+  background: #4a8f1f;
+}
+.promo__button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
 
 @media (max-width: 1220px) {
   .page-header {
-    background: none;
+    background-position: 100vw 0;
   }
   .page-header__can--tablet {
     top: 320px;
@@ -190,6 +220,10 @@ a {
     color: #000;
     padding: 20px 0 0 0;
   }
+  .main-nav__item-index._active {
+    border-bottom: 2px solid #68B738;
+  }
+
   .promo {
     padding: 27px 0 0 84px;
   }
@@ -204,7 +238,7 @@ a {
 @media (max-width: 767.98px) {
   .page-header {
     display: grid;
-    background-color: #fff;
+    background-position: 100vw 0;
   }
   .page-header__container {
     height: 575px;
@@ -276,7 +310,7 @@ a {
     z-index: 2;
     position: absolute;
     top: 260px;
-    left: 10%;
+    left: 15vw;
   }
 
   .main-nav {
@@ -311,20 +345,28 @@ a {
   .main-nav__list:first-child {
     border-top: 1px solid #E6E6E6;
   }
+  .main-nav__item-index._active {
+    border-bottom: 1px solid #E6E6E6;
+  }
+
   .main-nav._active {
     top: 90px;
   }
 
   .promo {
-    padding: 0 0 0 0;
+    background-image: url("../img/index-background-mobile.jpg");
+    background-image: -webkit-image-set(url("../img/index-background-mobile@2x.webp") 2x, url("../img/index-background-mobile.webp") 1x, url("../img/index-background-mobile@2x.jpg") 2x, url("../img/index-background-mobile.jpg") 1x);
+    background-image: image-set(url("../img/index-background-mobile@2x.webp") 2x, url("../img/index-background-mobile.webp") 1x, url("../img/index-background-mobile@2x.jpg") 2x, url("../img/index-background-mobile.jpg") 1x);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 300px;
     text-align: center;
     display: grid;
-    background: url(../img/index-background-mobile.png) 0 0 no-repeat;
-    background-size: cover;
     position: relative;
     align-content: center;
+    padding: 0 0 0 0;
   }
   .promo__block {
     padding: 0 0 140px 0;

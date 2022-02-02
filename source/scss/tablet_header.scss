@@ -4,7 +4,7 @@
 @media (max-width: 1220px) {
 
   .page-header {
-    background: none;
+    background-position: 100vw 0;
 
     &__can--tablet {
       top: 320px;
@@ -27,9 +27,9 @@
       padding: 20px 0 0 0;
     }
 
-    &__item {}
-
-    &__link {}
+    &__item-index._active {
+      border-bottom: 2px solid #68B738;
+    }
   }
 
   .promo {
