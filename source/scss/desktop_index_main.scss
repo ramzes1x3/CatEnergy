@@ -1,0 +1,145 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+
+.programs-list {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(auto-fill, auto);
+  grid-column-gap: 80px;
+  grid-row-gap: 80px;
+
+  &__item {
+    background-color: #F2F2F2;
+    height: auto;
+  }
+}
+
+.nutrition-programs-article {
+  padding: 40px 55px 0 55px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "svg head"
+    "slog slog"
+    "more more";
+  row-gap: 38px;
+
+  &__heading {
+    @include font_base(400, 36px, 1, #000000);
+    text-transform: uppercase;
+    grid-area: head;
+    align-self: center;
+    justify-self: start;
+  }
+
+  &__svg-cat {
+    grid-area: svg;
+    align-self: center;
+  }
+
+  &__slogan {
+    font-family: $font_arial;
+    @include font_base(400, 16px, 1.5, #000000);
+    grid-area: slog;
+  }
+
+  &__more {
+    font-family: $font_oswald_regular;
+    @include font_base(400, 20px, 1.5, #000000);
+    text-transform: uppercase;
+    grid-area: more;
+    padding: 0 0 10% 0;
+  }
+
+  &__link:hover {
+    cursor: pointer;
+  }
+
+  &__link:hover &__svg-arrow {
+    width: 40px;
+    height: 15px;
+    margin-bottom: 2px;
+  }
+
+  &__link:active {
+    opacity: 0.3;
+  }
+
+  &__svg-arrow {
+    margin: 0 0 3px 10px;
+  }
+}
+
+.svg-nutrition_arrow-dims {
+  width: 50px;
+}
+
+.weight-gain h3 {
+  padding: 0 0 0 20px;
+}
+
+.about-nutrition-programs {
+
+  &__heading {}
+}
+
+.about-list {
+
+  &__useful {}
+
+  &__item-img {}
+
+  &__text {}
+
+  &__convenience {}
+
+  &__usage {}
+
+  &__result {}
+}
+
+.example {
+
+  &__title {}
+
+  &__history {}
+
+  &__list {}
+
+  &__img-result {}
+
+  &__slider {}
+}
+
+.list-result {
+
+  &__weight {}
+
+  &__time {}
+
+  &__price {}
+}
+
+.slider {
+
+  &__before {}
+
+  &__range {}
+
+  &__size-range {}
+
+  &__after {}
+}
+
+.about-us {
+
+  &__invitation {}
+
+  &__address {}
+
+  &__map {}
+}

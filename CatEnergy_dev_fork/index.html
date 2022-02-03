@@ -32,7 +32,7 @@
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item-index"><a href="index.html" class="main-nav__link">ГЛАВНАЯ</a></li>
               <li class="main-nav__item main-nav__item-catalog"><a href="#" class="main-nav__link">КАТАЛОГ ПРОДУКЦИИ</a></li>
-              <li class="main-nav__item main-nav__item-program page"><a href="#" class="main-nav__link">ПОДБОР ПРОГРАММЫ</a></li>
+              <li class="main-nav__item main-nav__item-program-page"><a href="#" class="main-nav__link">ПОДБОР ПРОГРАММЫ</a></li>
             </ul>
           </nav>
       </div>
@@ -49,25 +49,41 @@
       <main class="page-main">
           <div class="page-main__container">
             <section class="nutrition-programs">
-              <ul class="nutrition-programs-list programs-list">
-                <li class="programs-list__weight-loss">
-                  <article class="programs-list__article-weight-loss weight-loss">
-                    <h3 class="weight-loss__heading">Похудение</h3>
-                    <picture class="weight-loss__img"><picture><source srcset="#" type="image/webp"><img src="#" alt="Стройный кот"></picture></picture>
-                    <p class="weight-lose__slogan">
+              <ul class="nutrition-programs__list programs-list">
+                <li class="programs-list__item">
+                  <article class="programs-list__article nutrition-programs-article weight-loss">
+                    <h3 class="nutrition-programs-article__heading">Похудение</h3>
+                    <svg class="nutrition-programs-article__svg-cat cat-slim" role='img' aria-label='' focusable='false' width='100' height='106' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+                      <use xlink:href='sprite/icons.svg#cat_slim'></use>
+                    </svg>
+                    <p class="nutrition-programs-article__slogan">
                       Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
                     </p>
-                    <a href="#" class="weight-lose__more">Каталог slim</a>
+                    <div class="nutrition-programs-article__more">
+                      <a href="#" class="nutrition-programs-article__link">Каталог slim
+                        <svg class="nutrition-programs-article__svg-arrow" role='img' aria-label='' focusable='false' width='32' height='10' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+                          <use xlink:href='sprite/icons.svg#nutrition_arrow'></use>
+                        </svg>
+                      </a>
+                    </div>
                   </article>
                 </li>
-                <li class="programs-list__weight-gain">
-                  <article class="programs-list__article-weight-gain weight-gain">
-                    <h3 class="weight-gain__heading">Набор массы</h3>
-                    <picture class="weight-gain__img"><picture><source srcset="#" type="image/webp"><img src="#" alt="Стройный кот"></picture></picture>
-                    <p class="weight-gain__slogan">
+                <li class="programs-list__item">
+                  <article class="programs-list__article nutrition-programs-article weight-gain">
+                    <h3 class="nutrition-programs-article__heading">Набор массы</h3>
+                    <svg class="nutrition-programs-article__svg-cat cat-gain" role='img' aria-label='' focusable='false' width='134' height='100' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+                      <use xlink:href='sprite/icons.svg#Cat_gain'></use>
+                    </svg>
+                    <p class="nutrition-programs-article__slogan">
                       Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
                     </p>
-                    <a href="#" class="weight-gain__more">Каталог pro</a>
+                    <div class="nutrition-programs-article__more">
+                      <a href="#" class="nutrition-programs-article__link">Каталог pro
+                        <svg class="nutrition-programs-article__svg-arrow" role='img' aria-label='' focusable='false' width='32' height='10' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+                          <use xlink:href='sprite/icons.svg#nutrition_arrow'></use>
+                        </svg>
+                      </a>
+                    </div>
                   </article>
                 </li>
               </ul>

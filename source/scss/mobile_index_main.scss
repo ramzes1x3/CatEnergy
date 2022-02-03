@@ -1,0 +1,123 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+@media (max-width: 767.98px) {
+
+  .programs-list {
+
+    &__item {}
+
+    &__article {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        "svg head"
+        "slog slog"
+        "more more";
+      row-gap: 5%;
+      margin: 20px 0 0 20px;
+    }
+  }
+
+  .nutrition-programs-article {
+
+    &__heading {
+      margin: 0;
+      padding: 0;
+      font-size: 6vw;
+    }
+
+    &__svg-cat {
+      margin: 0;
+      width: 15vw;
+      height: 10vh;
+    }
+
+    &__slogan {
+      font-size: 3vw;
+    }
+
+    &__more {
+      font-size: 4.5vw;
+    }
+
+    &__link {}
+
+    &__svg-arrow {}
+  }
+
+  .weight-loss {}
+
+  .cat-slim {}
+
+  .weight-gain {}
+
+  .cat-gain {
+    width: 17vw;
+    height: 11vh;
+  }
+
+  .about-nutrition-programs {
+
+    &__heading {}
+  }
+
+  .about-list {
+
+    &__useful {}
+
+    &__item-img {}
+
+    &__text {}
+
+    &__convenience {}
+
+    &__usage {}
+
+    &__result {}
+  }
+
+  .example {
+
+    &__title {}
+
+    &__history {}
+
+    &__list {}
+
+    &__img-result {}
+
+    &__slider {}
+  }
+
+  .list-result {
+
+    &__weight {}
+
+    &__time {}
+
+    &__price {}
+  }
+
+  .slider {
+
+    &__before {}
+
+    &__range {}
+
+    &__size-range {}
+
+    &__after {}
+  }
+
+  .about-us {
+
+    &__invitation {}
+
+    &__address {}
+
+    &__map {}
+  }
+
+}

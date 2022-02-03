@@ -5,6 +5,7 @@
 
   .page-header {
     background-position: 100vw 0;
+    margin: 0;
 
     &__can--tablet {
       top: 320px;
@@ -16,8 +17,6 @@
       grid-template-rows: 125px 850px;
       align-items: start;
     }
-
-    &__wrap {}
   }
 
   .main-nav {
@@ -35,8 +34,6 @@
   .promo {
     padding: 27px 0 0 84px;
 
-    &__advertisement {}
-
     &__slogan {
       margin: -15px 0 45px 0;
       padding: 0 0 0 0;
@@ -46,5 +43,4 @@
       padding: 10px 28px 10px 28px;
     }
   }
-
 }

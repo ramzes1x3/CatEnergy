@@ -1,7 +1,6 @@
 @import "mixins.scss";
 @import "variables.scss";
 @import "fonts.scss";
-@import "main.scss";
 @import "footer.scss";
 
 * {
@@ -101,3 +100,7 @@ a {
 @import "desktop_header.scss";
 @import "tablet_header.scss";
 @import "mobile_header.scss";
+
+@import "desktop_index_main.scss";
+@import "tablet_index_main.scss";
+@import "mobile_index_main.scss";

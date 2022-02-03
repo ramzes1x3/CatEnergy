@@ -5,6 +5,7 @@
   .page-header {
     display: grid;
     background-position: 100vw 0;
+    margin: 0 0 20px 0;
 
     &__container {
       height: 575px;
@@ -108,7 +109,7 @@
     transition: all 0.5s ease 0s;
     overflow-y: auto;
     z-index: 2;
-    margin: -15.5px 0 0 0;
+    margin: -16px 0 0 0;
 
     &__list {
       font-family: $font_oswald_medium;
@@ -128,7 +129,7 @@
     }
 
     &__list:first-child {
-      border-top: 1px solid #E6E6E6;
+      border-top: 2px solid #E6E6E6;
     }
 
     &__item-index._active {
