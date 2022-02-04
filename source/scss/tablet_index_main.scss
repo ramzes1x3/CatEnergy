@@ -19,7 +19,6 @@
       ;
       padding: 0 30px 0 30px;
     }
-
   }
 
   .nutrition-programs-article {
@@ -27,14 +26,6 @@
     &__heading {
       margin: 60px 0 0 0;
     }
-
-    &__slogan {}
-
-    &__more {}
-
-    &__link {}
-
-    &__svg-arrow {}
   }
 
   .weight-gain h3 {
@@ -54,56 +45,138 @@
   }
 
   .about-nutrition-programs {
+    margin-bottom: 40px;
 
-    &__heading {}
+    &__heading {
+      @include font_base(400, 60px, 1, #000);
+      padding: 0;
+      margin: 40px 0 40px 0;
+    }
   }
 
   .about-list {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, auto);
+    column-gap: 140px;
+    row-gap: 90px;
+    border-bottom: 1px solid #E6E6E6;
+    padding-bottom: 60px;
 
-    &__useful {}
-
-    &__item-img {}
-
-    &__text {}
-
-    &__convenience {}
-
-    &__usage {}
-
-    &__result {}
+    &__item {
+      display: grid;
+      grid-template-rows: repeat(2, auto);
+      row-gap: 40px;
+      position: relative;
+    }
   }
 
   .example {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px 868px;
+    background-image: none;
+    background-color: #fff;
+    padding: 0;
+    margin-bottom: 50px;
 
-    &__title {}
+    &__about {
+      display: grid;
+      grid-template-rows: repeat(3, 130px);
+      grid-template-areas:
+        "t t t t"
+        "h h h h"
+        "w tm p p"
+      ;
+      row-gap: 0;
+      margin-bottom: 30px;
+    }
 
-    &__history {}
+    &__title {
+      @include font_base(400, 60px, 1, #000);
+      padding: 0 0 0 0;
+      grid-area: t;
+    }
 
-    &__list {}
+    &__history {
+      font-family: $font_arial;
+      @include font_base(400, 16px, 1.3, #000);
+      grid-area: h;
+    }
 
-    &__img-result {}
+    &__weight {
+      grid-area: w;
+    }
 
-    &__slider {}
-  }
+    &__time {
+      grid-area: tm;
+      margin: 0 0 0 -20px;
+    }
 
-  .list-result {
+    &__item {
+      justify-self: start;
+    }
 
-    &__weight {}
+    &__price {
+      text-align: end;
+      margin: 0 0 0 70px;
+    }
 
-    &__time {}
+    &__item {
+      width: 162px;
+      height: 77px;
+      @include font_base(400, 30px, 2.5, #000);
+      border: 1px solid #CDCDCD;
+      border-radius: 3px;
+      text-align: center;
+      position: relative;
+    }
 
-    &__price {}
-  }
+    &__stroke {
+      display: inline-block;
+      font-family: $font_arial;
+      @include font_base(400, 14px, 1, #444);
+      width: auto;
+      background-color: #fff;
+      text-align: center;
+      padding: 0 8px 0 8px;
+      position: absolute;
+      top: 65px;
+      left: 7%;
+    }
 
-  .slider {
+    &__stroke-1 {
+      left: 15%;
+    }
 
-    &__before {}
+    &__price {
+      @include font_base(400, 20px, 1, #000);
+      text-transform: uppercase;
+      grid-area: p;
+      margin-top: 20px;
+    }
 
-    &__range {}
-
-    &__size-range {}
-
-    &__after {}
+    &__background {
+      position: absolute;
+      top: 2800px;
+      left: 0;
+      width: 100%;
+      height: 868px;
+      background-image: url(../img/image_cat_tablet.png);
+      background-image: -webkit-image-set(url('../img/image_cat_tablet@2x.webp') 2x,
+          url('../img/image_cat_tablet.webp') 1x,
+          url('../img/image_cat_tablet@2x.png') 2x,
+          url('../img/image_cat_tablet.png') 1x);
+      background-image: image-set(url('../img/image_cat_tablet@2x.webp') 2x,
+          url('../img/image_cat_tablet.webp') 1x,
+          url('../img/image_cat_tablet@2x.png') 2x,
+          url('../img/image_cat_tablet.png') 1x);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      z-index: 1;
+    }
   }
 
   .about-us {

@@ -74,65 +74,148 @@
   }
 }
 
-.svg-nutrition_arrow-dims {
-  width: 50px;
-}
-
 .weight-gain h3 {
   padding: 0 0 0 20px;
 }
 
 .about-nutrition-programs {
+  margin-bottom: 60px;
 
-  &__heading {}
+  &__heading {
+    @include font_base(400, 60px, 1, #000);
+    padding: 0;
+    margin: 40px 0 40px 0;
+  }
 }
 
 .about-list {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, auto);
+  column-gap: 100px;
+  row-gap: 90px;
 
-  &__useful {}
+  &__item {
+    display: grid;
+    grid-template-columns: 220px;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 20px;
+    position: relative;
+  }
 
-  &__item-img {}
+  &__number {
+    position: absolute;
+    font-family: $font_oswald_regular;
+    @include font_base(400, 280px, 1, #F2F2F2);
+    top: -40px;
+    left: 120px;
+    z-index: -1;
+    overflow: hidden;
+  }
 
-  &__text {}
+  &__svg {
+    width: 80px;
+    height: 80px;
+  }
 
-  &__convenience {}
-
-  &__usage {}
-
-  &__result {}
+  &__text {
+    font-family: $font_arial;
+    @include font_base(400, 16px, 1.5, #444);
+  }
 }
 
 .example {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  grid-template-rows: 100%;
+  background-image: url(../img/image_cat.png);
+  background-image: -webkit-image-set(url('../img/image_cat@2x.webp') 2x,
+      url('../img/image_cat@.webp') 1x,
+      url('../img/image_cat@2x.png') 2x,
+      url('../img/image_cat.png') 1x);
+  background-image: image-set(url('../img/image_cat@2x.webp') 2x,
+      url('../img/image_cat@.webp') 1x,
+      url('../img/image_cat@2x.png') 2x,
+      url('../img/image_cat.png') 1x);
+  background-position: 120% 0;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
 
-  &__title {}
 
-  &__history {}
+  &__about {
+    display: grid;
+    row-gap: 60px;
+    grid-template-areas:
+      "t t"
+      "h h"
+      "w tm"
+      "p p";
+  }
 
-  &__list {}
+  &__title {
+    @include font_base(400, 60px, 1, #000);
+    padding: 35px 0 20px 0;
+    grid-area: t;
+  }
 
-  &__img-result {}
+  &__history {
+    font-family: $font_arial;
+    @include font_base(400, 16px, 1.3, #444);
+    grid-area: h;
+  }
 
-  &__slider {}
-}
+  &__weight {
+    grid-area: w;
+  }
 
-.list-result {
+  &__time {
+    grid-area: tm;
+  }
 
-  &__weight {}
+  &__item,
+  &__price {
+    justify-self: start;
+  }
 
-  &__time {}
+  &__item {
+    width: 162px;
+    height: 77px;
+    @include font_base(400, 30px, 2.75, #000);
+    border: 1px solid #CDCDCD;
+    border-radius: 3px;
+    position: relative;
+    text-align: center;
+  }
 
-  &__price {}
-}
+  &__stroke {
+    display: inline-block;
+    font-family: $font_arial;
+    @include font_base(400, 14px, 1, #444);
+    width: auto;
+    background-color: #fff;
+    text-align: center;
+    padding: 0 8px 0 8px;
+    position: absolute;
+    top: 65px;
+    left: 7%;
+  }
 
-.slider {
+  &__stroke-1 {
+    left: 15%;
+  }
 
-  &__before {}
+  &__price {
+    @include font_base(400, 20px, 1, #000);
+    text-transform: uppercase;
+    grid-area: p;
+  }
 
-  &__range {}
 
-  &__size-range {}
-
-  &__after {}
+  &__cost {
+    width: auto;
+    margin: 0 0 0 80px;
+  }
 }
 
 .about-us {

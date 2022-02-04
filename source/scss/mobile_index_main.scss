@@ -4,6 +4,11 @@
 @media (max-width: 767.98px) {
 
   .programs-list {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto-fill, auto);
 
     &__item {}
 
@@ -17,10 +22,12 @@
         "more more";
       row-gap: 5%;
       margin: 20px 0 0 20px;
+      height: 200px;
     }
   }
 
   .nutrition-programs-article {
+    height: 266px;
 
     &__heading {
       margin: 0;
@@ -39,6 +46,8 @@
     }
 
     &__more {
+      border-top: 1px solid #D9D9D9;
+      padding: 10px 0 0 0;
       font-size: 4.5vw;
     }
 
@@ -47,69 +56,143 @@
     &__svg-arrow {}
   }
 
-  .weight-loss {}
-
-  .cat-slim {}
-
-  .weight-gain {}
-
   .cat-gain {
     width: 17vw;
     height: 11vh;
   }
 
   .about-nutrition-programs {
+    padding: 0 1.5%;
+    margin-bottom: 40px;
 
-    &__heading {}
+    &__heading {
+      @include font_base(400, 36px, 1.29, #000);
+      padding: 0 0 0 10px;
+      margin: 30px 0 40px 0;
+    }
   }
 
   .about-list {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto-fill, auto);
+    row-gap: 20px;
+    padding-bottom: 0;
+    border-bottom: none;
 
-    &__useful {}
+    &__item {
+      font-family: $font_arial;
+      @include font_base(400, 14px, 1.29, #444);
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 10px;
+      row-gap: 0;
+    }
 
-    &__item-img {}
+    &__number {
+      display: none;
+    }
 
-    &__text {}
-
-    &__convenience {}
-
-    &__usage {}
-
-    &__result {}
+    &__svg {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   .example {
+    background-color: #EAEAEA;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px 75vw;
+    padding: 0 20px 0 20px;
 
-    &__title {}
+    &__about {
+      display: grid;
+      grid-template-rows: 100px 100px 100px;
+      row-gap: 10px;
+      grid-template-areas:
+        "t t"
+        "h h"
+        "w tm"
+        "p p";
+    }
 
-    &__history {}
+    &__title {
+      @include font_base(400, 36px, 1.29, #000);
+      padding: 25px 0 0 0;
+      grid-area: t;
+    }
 
-    &__list {}
+    &__history {
+      font-family: $font_arial;
+      @include font_base(400, 14px, 1.29, #000);
+      grid-area: h;
+    }
 
-    &__img-result {}
+    &__weight {
+      grid-area: w;
+    }
 
-    &__slider {}
+    &__time {
+      grid-area: tm;
+    }
+
+    &__item,
+    &__price {
+      justify-self: center;
+    }
+
+    &__item {
+      width: 124px;
+      height: 64px;
+      @include font_base(400, 24px, 2.75, #000);
+      border: 1px solid #CDCDCD;
+      border-radius: 3px;
+      position: relative;
+      text-align: center;
+    }
+
+    &__stroke {
+      display: inline-block;
+      font-family: $font_arial;
+      @include font_base(400, 12px, 1, #444);
+      position: absolute;
+      top: 50px;
+      left: 22px;
+      background-color: #EAEAEA;
+      width: 80px;
+    }
+
+    &__price {
+      @include font_base(400, 14px, 1.43, #000);
+      text-transform: uppercase;
+      grid-area: p;
+      text-align: center;
+      margin: 0;
+    }
+
+    &__cost {
+      margin: 0;
+    }
+
+    &__background {
+      background-image: url(../img/image_cat_mobile.png);
+      background-image: -webkit-image-set(url('../img/image_cat_mobile@2x.webp') 2x,
+          url('../img/image_cat_mobile.webp') 1x,
+          url('../img/image_cat_mobile@2x.png') 2x,
+          url('../img/image_cat_mobile.png') 1x);
+      background-image: image-set(url('../img/image_cat_mobile@2x.webp') 2x,
+          url('../img/image_cat_mobile.webp') 1x,
+          url('../img/image_cat_mobile@2x.png') 2x,
+          url('../img/image_cat_mobile.png') 1x);
+      top: 2070px;
+      left: 0;
+      width: 100%;
+      height: 73vw;
+    }
   }
 
-  .list-result {
-
-    &__weight {}
-
-    &__time {}
-
-    &__price {}
-  }
-
-  .slider {
-
-    &__before {}
-
-    &__range {}
-
-    &__size-range {}
-
-    &__after {}
-  }
 
   .about-us {
 
