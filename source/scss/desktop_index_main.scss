@@ -131,11 +131,11 @@
   grid-template-rows: 100%;
   background-image: url(../img/image_cat.png);
   background-image: -webkit-image-set(url('../img/image_cat@2x.webp') 2x,
-      url('../img/image_cat@.webp') 1x,
+      url('../img/image_cat.webp') 1x,
       url('../img/image_cat@2x.png') 2x,
       url('../img/image_cat.png') 1x);
   background-image: image-set(url('../img/image_cat@2x.webp') 2x,
-      url('../img/image_cat@.webp') 1x,
+      url('../img/image_cat.webp') 1x,
       url('../img/image_cat@2x.png') 2x,
       url('../img/image_cat.png') 1x);
   background-position: 120% 0;
@@ -219,10 +219,41 @@
 }
 
 .about-us {
+  margin-bottom: 100px;
 
-  &__invitation {}
+  &__map {
+    position: absolute;
+    top: 2070px;
+    left: 0;
+    height: 395px;
+    width: 100%;
+    z-index: -1;
+  }
 
-  &__address {}
+  &__block-address {
+    background-color: #fff;
+    width: 450px;
+    height: 210px;
+    margin: 163px 0 0 0;
+    padding: 0 50px 0 50px;
+    display: grid;
+    grid-template-columns: 40% 45%;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  &__map {}
+  &__invitation {
+    @include font_base(400, 20px, 1.05, #111);
+    text-transform: uppercase;
+  }
+
+  &__address {
+    font-family: $font_arial;
+    @include font_base(400, 16px, 1.25, #444);
+  }
+
+  &__town {
+    display: inline-block;
+    margin-top: 12px;
+  }
 }
