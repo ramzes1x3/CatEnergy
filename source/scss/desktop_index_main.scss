@@ -221,27 +221,28 @@
 }
 
 .about-us {
-  margin-bottom: 100px;
+  position: relative;
+  width: 100vw;
+  margin-bottom: 50px;
 
   &__map {
-    position: absolute;
-    top: 2070px;
-    left: 0;
-    height: 395px;
-    width: 100%;
-    z-index: -1;
+    height: 400px;
   }
 
   &__block-address {
+    position: absolute;
     background-color: #fff;
+    top: 105.5px;
+    left: 4%;
     width: 450px;
     height: 210px;
-    margin: 163px 0 0 0;
+    margin: 0 0 0 0;
     padding: 0 50px 0 50px;
     display: grid;
     grid-template-columns: 40% 45%;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
   }
 
   &__invitation {

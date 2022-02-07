@@ -168,14 +168,14 @@
       left: calc(-50vw + 50%);
       height: 868px;
       background-image: url(../img/image_cat_tablet.png);
-      background-image: -webkit-image-set(url('../img/image_cat_tablet@2x.webp') 2x,
-          url('../img/image_cat_tablet.webp') 1x,
-          url('../img/image_cat_tablet@2x.png') 2x,
-          url('../img/image_cat_tablet.png') 1x);
-      background-image: image-set(url('../img/image_cat_tablet@2x.webp') 2x,
-          url('../img/image_cat_tablet.webp') 1x,
-          url('../img/image_cat_tablet@2x.png') 2x,
-          url('../img/image_cat_tablet.png') 1x);
+      background-image: -webkit-image-set(url(../img/image_cat_tablet@2x.webp) 2x,
+          url(../img/image_cat_tablet.webp) 1x,
+          url(../img/image_cat_tablet@2x.png) 2x,
+          url(../img/image_cat_tablet.png) 1x);
+      background-image: image-set(url(../img/image_cat_tablet@2x.webp) 2x,
+          url(../img/image_cat_tablet.webp) 1x,
+          url(../img/image_cat_tablet@2x.png) 2x,
+          url(../img/image_cat_tablet.png) 1x);
       background-repeat: no-repeat;
       background-position: 0 0;
       background-size: cover;
@@ -185,24 +185,19 @@
   }
 
   .about-us {
-    margin-bottom: 500px;
-
-    &__map {
-      position: absolute;
-      top: 3862px;
-      left: 0;
-      height: 395px;
-      width: 100%;
-      z-index: -1;
-      overflow: hidden;
-    }
+    position: relative;
+    width: 100vw;
+    margin-bottom: 20px;
 
     &__block-address {
+      position: relative;
       background-color: #fff;
+      top: 0;
+      left: 0;
       width: 710px;
       height: 200px;
       margin: 0 auto;
-      padding: 0 10px;
+      padding: 0;
       display: grid;
       grid-template-columns: 20% 25%;
       justify-content: space-between;
