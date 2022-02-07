@@ -1,7 +1,6 @@
 @import "mixins.scss";
 @import "variables.scss";
 @import "fonts.scss";
-@import "footer.scss";
 
 * {
   margin: 0;
@@ -104,3 +103,7 @@ a {
 @import "desktop_index_main.scss";
 @import "tablet_index_main.scss";
 @import "mobile_index_main.scss";
+
+@import "desktop_footer.scss";
+@import "tablet_footer.scss";
+@import "mobile_footer.scss";

@@ -96,6 +96,7 @@
   }
 
   .example {
+    width: 100%;
     background-color: #EAEAEA;
     display: grid;
     grid-template-columns: 95%;
@@ -112,9 +113,11 @@
         url('../img/image_cat_mobile.webp') 1x,
         url('../img/image_cat_mobile@2x.png') 2x,
         url('../img/image_cat_mobile.png') 1x);
+    background-repeat: no-repeat;
     background-position: 50% 99%;
 
     &__about {
+      width: 100%;
       display: grid;
       grid-template-rows: 100px 100px 100px;
       row-gap: 10px;
@@ -184,6 +187,10 @@
     }
 
     &__background {
+      display: none;
+    }
+
+    &__result {
       display: none;
     }
   }

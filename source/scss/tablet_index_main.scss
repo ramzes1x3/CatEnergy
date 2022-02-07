@@ -73,6 +73,8 @@
   }
 
   .example {
+    width: 710px;
+    position: relative;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 400px 868px;
@@ -90,6 +92,9 @@
         "w tm p p"
       ;
       row-gap: 0;
+      width: 710px;
+      margin: 0 auto;
+      padding: 0 10px;
       margin-bottom: 30px;
     }
 
@@ -157,11 +162,10 @@
       margin-top: 20px;
     }
 
-    &__background {
-      position: absolute;
-      top: 2800px;
-      left: 0;
-      width: 100%;
+    &__result {
+      position: relative;
+      width: 100vw;
+      left: calc(-50vw + 50%);
       height: 868px;
       background-image: url(../img/image_cat_tablet.png);
       background-image: -webkit-image-set(url('../img/image_cat_tablet@2x.webp') 2x,
@@ -177,6 +181,7 @@
       background-size: cover;
       z-index: 1;
     }
+
   }
 
   .about-us {
@@ -194,10 +199,10 @@
 
     &__block-address {
       background-color: #fff;
-      width: 100%;
+      width: 710px;
       height: 200px;
-      margin: 0 0 0 0;
-      padding: 0;
+      margin: 0 auto;
+      padding: 0 10px;
       display: grid;
       grid-template-columns: 20% 25%;
       justify-content: space-between;

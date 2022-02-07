@@ -126,8 +126,10 @@
 }
 
 .example {
+  width: 1220px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.8fr;
+  grid-template-columns: 450px 1fr;
   grid-template-rows: 100%;
   background-image: url(../img/image_cat.png);
   background-image: -webkit-image-set(url('../img/image_cat@2x.webp') 2x,
@@ -138,7 +140,7 @@
       url('../img/image_cat.webp') 1x,
       url('../img/image_cat@2x.png') 2x,
       url('../img/image_cat.png') 1x);
-  background-position: 120% 0;
+  background-position: 124% 0;
   background-repeat: no-repeat;
   margin-bottom: 50px;
 

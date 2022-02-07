@@ -1,0 +1,12 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+@media (max-width: 1220px) {
+  .page-footer {
+    margin-top: -137px;
+
+    &__container {
+      grid-template-columns: 40.33% 135px 40.34%;
+    }
+  }
+}
